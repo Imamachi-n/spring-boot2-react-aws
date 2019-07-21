@@ -1,0 +1,30 @@
+spring:
+  # Active profile setting
+  profiles:
+    active: development
+  # REST API basePath
+  data:
+    rest:
+      base-path: /api
+
+  # Spring Data JPA settings
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+
+# Tomcat server settings
+server:
+  port: 8080
+
+---
+# Development
+spring:
+  profiles: development
+
+  # h2 database settings
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
